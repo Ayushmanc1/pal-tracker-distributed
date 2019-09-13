@@ -7,9 +7,9 @@ applications:
   disk_qouta: 475M
   instances: 1
   env:
-    REGISTRATION_SERVER_ENDPOINT: http://registration-pal-ayushmanc1.cfapps.io
     JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ }, memory_calculater: { stack_threads: 100} }'
     JAVA_OPTS: '-Xms64m -Xmx256m'
     GRANT_TYPE: client_credentials
   services:
   - tracker-backlog-database
+  - tracker-service-registry

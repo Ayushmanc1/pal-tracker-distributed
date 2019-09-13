@@ -7,7 +7,7 @@ applications:
   disk_qouta: 475M
   instances: 1
   env:
-    JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ }, memory_calculater: { stack_threads: 100} }'
+    JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ }, memory_calculator: { stack_threads: 100} }'
     JAVA_OPTS: '-Xms64m -Xmx256m'
     GRANT_TYPE: client_credentials
   services:

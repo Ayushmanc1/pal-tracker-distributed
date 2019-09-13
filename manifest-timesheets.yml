@@ -2,14 +2,11 @@ applications:
 - name: tracker-timesheets
   path: ./applications/timesheets-server/build/libs/timesheets-server.jar
   routes:
-  - route: timesheets-pal-ayushmanc1.cfapps.io
-  memory: 475M
-  disk_qouta: 475M
+  - route: timesheets-pal-{UNIQUE_IDENTIFIER}.apps.chicken.pal.pivotal.io
+  memory: 1G
   instances: 1
   env:
-    JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ }, memory_calculator: { stack_threads: 100} }'
-    JAVA_OPTS: '-Xms64m -Xmx256m'
-    GRANT_TYPE: client_credentials
+    JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
   services:
   - tracker-timesheets-database
   - tracker-service-registry
